@@ -11,6 +11,9 @@ export default function Index() {
       }}
     >
       <Button title="Ir al Formulario" onPress={() => {router.push('/myform')}} />
+                    <View style={{height:20}} />
+        
+      <Button title="Ir al Contador" onPress={() => {router.push('/mycount')}} />
     </View>
   );
 }

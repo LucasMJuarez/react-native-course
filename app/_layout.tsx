@@ -11,6 +11,7 @@ export default function RootLayout() {
     >
       <Stack.Screen name='index' options={{headerTitle: 'Home'}} />
       <Stack.Screen name='myform' options={{headerTitle: 'Formulario'}} />
+      <Stack.Screen name='mycount' options={{headerTitle: 'Contador'}} />
     </Stack>  
-  )
+  );
 }
