@@ -2,13 +2,24 @@ import React, { useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 import { Checkbox } from "react-native-paper";
 
-const Form = () => {
+type FormProps = {
+  isDni?: boolean;  
+};
+
+const Form = ({ isDni }: FormProps) => {
   const [checked, setChecked] = useState(true);
 
   return (
     <View>
       <TextInput placeholder="Ingrese su nombre" style={styles.input} />
       <TextInput placeholder="Ingrese su apellido" style={styles.input} />
+      {isDni && (
+        <TextInput
+          placeholder="Ingrese su DNI"
+          style={styles.input}
+          keyboardType="numeric"
+        />
+      )}
       <View style={styles.checkbox}>
         <Checkbox
           status={checked ? "checked" : "unchecked"}
